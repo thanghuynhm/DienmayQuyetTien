@@ -7,10 +7,10 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create",null, new { @class = "btn btn-primary" })
 </p>
-<table class="table">
-    <tr>
+<table class="table table-bordered table-condensed table-hover table-responsive table-striped">
+    <tr style="background-color: green; color: red; text-align: center;">
         <th>
             @Html.DisplayNameFor(model => model.MaSP)
         </th>
@@ -59,9 +59,9 @@
             @Html.DisplayFor(modelItem => item.LoaiSanPham.TenLoai)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" }) 
         </td>
     </tr>
 }
